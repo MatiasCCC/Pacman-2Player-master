@@ -261,16 +261,16 @@ class Game {
   drawGameStartingScreen() {
     this.gameModeCounter++;
 
-    writeTextOnCanvasWithSize(this.ctx,
+ /*   writeTextOnCanvasWithSize(this.ctx,
       'PLAYER ONE',
       16,
       '#00ffde',
       (9 * 16),
       HEADER_HEIGHT + (12 * 16)
-    );
+    );*/
 
     writeTextOnCanvasWithSize(this.ctx,
-      'READY!',
+      'LISTOS!',
       16,
       '#ffff00',
       (11 * 16),
@@ -300,7 +300,7 @@ class Game {
     }
 
     writeTextOnCanvasWithSize(this.ctx,
-      'READY!',
+      'LISTOS!',
       16,
       '#ffff00',
       (11 * 16),
