@@ -90,6 +90,6 @@ class GameMenu {
 
     //write game menu options
     //writeTextOnCanvasWithSize(this.ctx, 'Single Player Mode', 15, 'white', 20, 250);
-    writeTextOnCanvasWithSize(this.ctx, 'EMPEZAR', 15, 'white', 20, 315);
+    writeTextOnCanvasWithSize(this.ctx, '         EMPEZAR', 15, 'white', 20, 315);
   }
 }
