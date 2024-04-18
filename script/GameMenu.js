@@ -2,18 +2,18 @@ class GameMenu {
   constructor(ctx, gameWorldObject) {
     this.ctx = ctx;
     this.gameWorldObject = gameWorldObject;
-    this.currentSelectedMenu = GAME_STATE.SINGLE_PLAYER;
+    this.currentSelectedMenu = GAME_STATE.PLAYER_VS_PLAYER;
     this.eventAdded = false;
 
     this.addGameMenuControls = (e) => {
       if (e.keyCode == 13) {
         this.initiateGame();
       }
-      if (e.keyCode === PLAYER1_CONTROL_KEY.UP) {
+/*      if (e.keyCode === PLAYER1_CONTROL_KEY.UP) {
         if (this.currentSelectedMenu != GAME_STATE.SINGLE_PLAYER) {
           this.currentSelectedMenu = this.currentSelectedMenu - 100;
         }
-      }
+      }*/ 
 
       if (e.keyCode === PLAYER1_CONTROL_KEY.DOWN) {
         if (this.currentSelectedMenu != GAME_STATE.PLAYER_VS_PLAYER) {
@@ -89,7 +89,7 @@ class GameMenu {
     );
 
     //write game menu options
-    writeTextOnCanvasWithSize(this.ctx, 'Single Player Mode', 15, 'white', 20, 250);
-    writeTextOnCanvasWithSize(this.ctx, 'Jugador VS Jugador Mode', 15, 'white', 20, 315);
+    //writeTextOnCanvasWithSize(this.ctx, 'Single Player Mode', 15, 'white', 20, 250);
+    writeTextOnCanvasWithSize(this.ctx, 'EMPEZAR', 15, 'white', 20, 315);
   }
 }
