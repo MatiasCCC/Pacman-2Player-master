@@ -345,7 +345,7 @@ document.addEventListener('keydown', (event) => {
     if (this.gameModeCounter > 20) {
       this.drawGameover();
       writeTextOnCanvasWithSize(this.ctx,
-        'Player ' + this.highScorerName + 1 + ' Wins',
+        'Jugador ' + (this.highScorerName + 1) + ' Gana',
         14,
         '#ffff00',
         (8 * 16),
