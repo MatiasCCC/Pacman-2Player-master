@@ -1,0 +1,13 @@
+@font-face {
+  font-family: PacmanEmu;
+  src: url('../font/emulogic.ttf');
+}
+
+canvas{
+  display:block;
+  margin: auto;
+}
+
+body{
+  background-color: black;
+}
