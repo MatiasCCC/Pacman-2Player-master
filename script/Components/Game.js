@@ -39,6 +39,16 @@ class Game {
     this.playerOneText = '1UP';
     this.playerTwoText = '2UP';
 
+    // This should be placed in a game setup or initialization function
+document.addEventListener('keydown', (event) => {
+  if (event.key === 'M' || event.key === 'm') { // Checking for both cases to be safe
+    // Ensure these actions correctly influence the game state
+    this.gameWorldObject.gameState = GAME_STATE.MENU;
+    this.hasPlayed = false;
+    console.log('Returning to menu'); // Debugging line to confirm the key press works
+  }
+});
+
     this.init();
   }
 
@@ -349,16 +359,6 @@ class Game {
       //this.gameWorldObject.gameState = GAME_STATE.MENU;
       //this.hasPlayed = false;
     }
-
-    //resetear el juego con la tecla M
-    document.addEventListener('keydown', (event) => {
-      // Example: Press 'M' to return to menu
-      if (event.key === 'M') {
-         this.gameWorldObject.gameState = GAME_STATE.MENU;
-         this.hasPlayed = false;
-      }
-  });
-
   }
 
   drawLevelCompleted() {
