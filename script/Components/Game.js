@@ -346,9 +346,19 @@ class Game {
       if (this.highestScore > this.highScore) {
         DataStorage.setItem('2PHighScore', this.highestScore);
       }
-      this.gameWorldObject.gameState = GAME_STATE.MENU;
-      this.hasPlayed = false;
+      //this.gameWorldObject.gameState = GAME_STATE.MENU;
+      //this.hasPlayed = false;
     }
+
+    //resetear el juego con la tecla M
+    document.addEventListener('keydown', (event) => {
+      // Example: Press 'M' to return to menu
+      if (event.key === 'M') {
+         this.gameWorldObject.gameState = GAME_STATE.MENU;
+         this.hasPlayed = false;
+      }
+  });
+
   }
 
   drawLevelCompleted() {
