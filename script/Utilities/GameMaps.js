@@ -154,7 +154,7 @@ const LAYOUT_MAP_PLAYER_VS_PLAYER = {
   column: 28,
   tileWidth: 16,
   tileHeight: 16,
-  totaldots: 331,
+  totaldots: 332,
   totalEnerzier: 7,
   image: PACMAN_TILES
 };
