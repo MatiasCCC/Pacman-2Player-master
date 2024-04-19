@@ -103,7 +103,7 @@ const SCATTER_MODE_TIME = 400;
 
 //maximum full speed of pacman, 
 //ghost and pacman use this value to set their speed based on game level and game mode
-const PACMAN_MAX_SPEED = 40;
+const PACMAN_MAX_SPEED = 35;
 
 const CHARACTERS_SPEED = {
   //character:{game level:{game mode:speed percentage which later will be taken relative to pacman max speed}}

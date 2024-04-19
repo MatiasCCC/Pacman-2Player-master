@@ -206,7 +206,7 @@ class Pacman extends GameActors {
    * @memberof Pacman
    */
   kill() {
-    //this.lives -= 1;
+    this.lives -= 1;
     this.audioLoader.play('die');
     if (this.lives < 0) {//game over if no lives left
       this.movingDirection = MOVING_DIRECTION.STOP;

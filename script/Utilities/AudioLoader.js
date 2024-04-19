@@ -19,7 +19,7 @@ class AudioLoader {
     this.loadAudio("opening_song", "audio/opening_song.wav");
     this.loadAudio("siren", "audio/siren.mp3");
     this.loadAudio("vcs_90", "audio/vcs_90.mp3");
-	this.loadAudio("power_pellet", "audio/power_pellet.wav")
+	this.loadAudio("energizer", "audio/power_pellet.wav")
 
     this.numberOfAudios = Object.keys(this.audios).length;
   }
