@@ -68,4 +68,11 @@ class AudioLoader {
       currentAudioSrc.currentTime = 0;
     };
   }
+
+  playLoop(keyword) {
+    if (this.audios[keyword]) {
+      this.audios[keyword].loop = true;
+      this.audios[keyword].play();
+    }
+  }
 }
