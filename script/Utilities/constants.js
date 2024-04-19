@@ -109,38 +109,38 @@ const CHARACTERS_SPEED = {
   //character:{game level:{game mode:speed percentage which later will be taken relative to pacman max speed}}
   PACMAN: {
     1: {
-      NORMAL: 80, //when scatter/chase mode
-      FRIGHT: 60 //when frightened mode
+      NORMAL: 100, //when scatter/chase mode
+      FRIGHT: 80 //when frightened mode
     },
     2: {
-      NORMAL: 70, //when scatter/chase mode
-      FRIGHT: 65 //when frightened mode
+      NORMAL: 90, //when scatter/chase mode
+      FRIGHT: 85 //when frightened mode
     },
     5: {
-      NORMAL: 60, //when scatter/chase mode
-      FRIGHT: 60 //when frightened mode
+      NORMAL: 80, //when scatter/chase mode
+      FRIGHT: 80 //when frightened mode
     },
     21: {
-      NORMAL: 70, //when scatter/chase mode
-      FRIGHT: 60 //when frightened mode
+      NORMAL: 90, //when scatter/chase mode
+      FRIGHT: 80 //when frightened mode
     }
   },
   GHOST: {
     1: {
-      NORMAL: 100, //when scatter/chase mode
-      FRIGHT: 150 //when frightened mode
+      NORMAL: 130, //when scatter/chase mode
+      FRIGHT: 170 //when frightened mode
     },
     2: {
-      NORMAL: 80, //when scatter/chase mode
-      FRIGHT: 140 //when frightened mode
+      NORMAL: 110, //when scatter/chase mode
+      FRIGHT: 160 //when frightened mode
     },
     5: {
-      NORMAL: 65, //when scatter/chase mode
-      FRIGHT: 130 //when frightened mode
+      NORMAL: 95, //when scatter/chase mode
+      FRIGHT: 150 //when frightened mode
     },
     21: {
-      NORMAL: 65, //when scatter/chase mode
-      FRIGHT: 60 //when frightened mode
+      NORMAL: 85, //when scatter/chase mode
+      FRIGHT: 80 //when frightened mode
     },
     DEAD: 200
   }
