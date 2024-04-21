@@ -11,3 +11,23 @@ canvas{
 body{
   background-color: black;
 }
+
+body {
+  /* Rotate the content 90 degrees clockwise */
+  transform: rotate(90deg);
+  
+  /* Transform origin to the top left corner */
+  transform-origin: top left;
+  
+  /* Adjust the position to fit the rotated content */
+  position: absolute;
+  top: 0;
+  left: 0;
+  
+  /* Ensure the width and height cover the full viewport */
+  width: 100vh; /* Viewport height becomes the width */
+  height: 100vw; /* Viewport width becomes the height */
+  
+  /* Adjust the viewport overflow */
+  overflow-x: hidden;
+}
