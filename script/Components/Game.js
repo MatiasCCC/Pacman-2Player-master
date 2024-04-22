@@ -521,3 +521,4 @@ document.addEventListener('keydown', (event) => {
     this.ctx.fillText("FPS: " + this.framesLastSecond, 10, 50);
   }
 }
+
