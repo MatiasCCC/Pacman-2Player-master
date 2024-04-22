@@ -55,7 +55,7 @@ let SINGLE_PLAYER_MODE = {
 
 let PLAYER_VS_PLAYER_MODE = {
   initialLevel: 1,
-  layoutMap: LAYOUT_MAP_PLAYER_VS_PLAYER,
+  layoutMap: LAYOUT_MAP_ORIGINAL,
   gameState: GAME_STATE.PLAYER_VS_PLAYER,
   player: {
     0: {
