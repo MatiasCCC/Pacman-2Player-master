@@ -45,6 +45,7 @@ document.addEventListener('keydown', (event) => {
     // Ensure these actions correctly influence the game state
     this.gameWorldObject.gameState = GAME_STATE.MENU;
     this.hasPlayed = false;
+    this.audioLoader.stop('opening_song');
     this.audioLoader.play('intermission');
     console.log('Returning to menu'); // Debugging line to confirm the key press works
   }
@@ -216,6 +217,7 @@ document.addEventListener('keydown', (event) => {
 
       case GAME_MODE.GAME_START:
         if (!this.hasPlayed) {
+          this.audioLoader.stop('intermission');
           this.audioLoader.play('opening_song');
           this.hasPlayed = true;
         }
