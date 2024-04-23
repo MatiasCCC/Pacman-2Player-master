@@ -288,8 +288,8 @@ class Pacman extends GameActors {
 
   addScore(nScore) {
     this.score += nScore;
-    // add extra life after getting 10,000 points
-    if (this.score >= 10000 && this.score - nScore < 10000) {
+    // add extra life after getting 3,000 points
+    if (this.score >= 3000 && this.score - nScore < 3000) {
       this.lives += 1;
       this.audioLoader.play('extralives');
     }
