@@ -17,7 +17,7 @@ class AudioLoader {
     this.loadAudio("extralives", "audio/extra-lives.wav");
     this.loadAudio("intermission", "audio/intermission.wav");
     this.loadAudio("opening_song", "audio/opening_song.wav");
-    this.loadAudio("siren", "audio/siren.mp3");
+    this.loadAudio("siren", "audio/siren.wav");
     this.loadAudio("vcs_90", "audio/vcs_90.mp3");
 	this.loadAudio("energizer", "audio/power_pellet.wav")
 

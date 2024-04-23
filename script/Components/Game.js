@@ -200,7 +200,6 @@ document.addEventListener('keydown', (event) => {
 
     switch (this.gameMode) {
       case GAME_MODE.GAME_PLAYING:
-
         //move pacman and ghosts
         for (let i = 0; i < this.players.length; i++) {
           if (!this.players[i].pacDead) {
