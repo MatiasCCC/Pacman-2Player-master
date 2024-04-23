@@ -190,6 +190,12 @@ document.addEventListener('keydown', (event) => {
 
     // draw game map
     this.gameMap.drawMap();
+    this.ctx.drawImage(FANTA_LOGO_IMAGE,
+      176,
+      266,
+      98,
+      50);
+
 
     switch (this.gameMode) {
       case GAME_MODE.GAME_PLAYING:
