@@ -15,7 +15,7 @@ class GameWorld {
     this.canvasElement.height = CANVAS_HEIGHT;
 
     this.ctx = this.canvasElement.getContext("2d");
-    this.ctx.imageSmoothingEnabled = false;// This keeps the image looking sharp.
+    this.ctx.imageSmoothingEnabled = true;// This keeps the image looking sharp.
 
     // this.gameState = GAME_STATE.MENU;
     this.gameState = GAME_STATE.MENU;
@@ -71,3 +71,5 @@ class GameWorld {
     this.playerVsPlayerGame = new Game(this.canvasElement, this.ctx, this, this.audioLoader, PLAYER_VS_PLAYER_MODE);
   }
 }
+
+

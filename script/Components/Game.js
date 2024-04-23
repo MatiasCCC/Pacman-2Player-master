@@ -158,6 +158,8 @@ document.addEventListener('keydown', (event) => {
     }
   }
 
+
+
   getScoreForGhostKilled() {
     return GHOST_EATEN_SCORE * this.ghostKilledScoreMultiplier;
   }
@@ -320,17 +322,6 @@ document.addEventListener('keydown', (event) => {
       HEADER_HEIGHT + (18 * 16)
     );
 
-    //sirena
-
-    if (this.gameMode === GAME_MODE.GAME_PLAYING && !this.isSirenPlaying) {
-      this.audioLoader.playLoop('siren');
-      this.isSirenPlaying = true; // Make sure to define this variable in your game class
-    } else if (this.gameMode !== GAME_MODE.GAME_PLAYING && this.isSirenPlaying) {
-      this.audioLoader.stop('siren'); // Assuming you have a method to stop the sound
-      this.isSirenPlaying = false;
-    }
-
-    //sirena
 
 
     if (this.gameModeCounter >= 100) {
@@ -502,6 +493,7 @@ document.addEventListener('keydown', (event) => {
       }
     }
   }
+  
 
   setFrameCount() {
     // get current time in seconds

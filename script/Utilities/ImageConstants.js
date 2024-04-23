@@ -3,6 +3,7 @@ const PACMAN_TILES = 'image/pacman-tiles.png';
 const PACMAN_SPRITES = 'image/sprites32.png';
 const PACMAN_LOGO = 'image/pacman-logo.png';
 
+
 const GAME_IMAGES = [
   PACMAN_TILES,
   PACMAN_SPRITES,
