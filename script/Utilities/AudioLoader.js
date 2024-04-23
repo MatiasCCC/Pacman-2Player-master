@@ -14,8 +14,8 @@ class AudioLoader {
 	this.loadAudio("eatingSound2", "audio/eatingSound2.wav");
     this.loadAudio("eating.short", "audio/eating.short.mp3");
     this.loadAudio("eatpill", "audio/eatpill.mp3");
-    this.loadAudio("extralives", "audio/extra-lives.mp3");
-    this.loadAudio("intermission", "audio/intermission.mp3");
+    this.loadAudio("extralives", "audio/extra-lives.wav");
+    this.loadAudio("intermission", "audio/intermission.wav");
     this.loadAudio("opening_song", "audio/opening_song.wav");
     this.loadAudio("siren", "audio/siren.mp3");
     this.loadAudio("vcs_90", "audio/vcs_90.mp3");
