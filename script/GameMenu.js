@@ -4,6 +4,9 @@ class GameMenu {
     this.gameWorldObject = gameWorldObject;
     this.currentSelectedMenu = GAME_STATE.PLAYER_VS_PLAYER;
     this.eventAdded = false;
+    
+
+    
 
     this.addGameMenuControls = (e) => {
       if (e.keyCode == 13) {
@@ -74,6 +77,7 @@ class GameMenu {
     //clear canvas
     this.ctx.fillStyle = '#000000';
     this.ctx.fillRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
+    
 
     //draw logo
     this.ctx.drawImage(
@@ -91,5 +95,7 @@ class GameMenu {
     //write game menu options
     //writeTextOnCanvasWithSize(this.ctx, 'Single Player Mode', 15, 'white', 20, 250);
     writeTextOnCanvasWithSize(this.ctx, '         EMPEZAR', 15, 'white', 20, 315);
+    
   }
+  
 }

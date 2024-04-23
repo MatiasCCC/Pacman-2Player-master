@@ -45,6 +45,7 @@ document.addEventListener('keydown', (event) => {
     // Ensure these actions correctly influence the game state
     this.gameWorldObject.gameState = GAME_STATE.MENU;
     this.hasPlayed = false;
+    this.audioLoader.play('intermission');
     console.log('Returning to menu'); // Debugging line to confirm the key press works
   }
 });
