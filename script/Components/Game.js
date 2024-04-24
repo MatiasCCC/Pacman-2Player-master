@@ -300,6 +300,22 @@ document.addEventListener('keydown', (event) => {
       HEADER_HEIGHT + (18 * 16)
     );
 
+    writeTextOnCanvasWithSize(this.ctx,
+      '1P',
+      16,
+      '#FF0000',
+      280,
+      515
+    );
+
+    writeTextOnCanvasWithSize(this.ctx,
+      '2P',
+      16,
+      '#FF0000',
+      280,
+      115
+    );
+
     if (this.gameModeCounter >= 100) {
       this.gameMode = GAME_MODE.GAME_BEGIN;
       this.hasPlayed = false;
@@ -330,7 +346,21 @@ document.addEventListener('keydown', (event) => {
       HEADER_HEIGHT + (18 * 16)
     );
 
+    writeTextOnCanvasWithSize(this.ctx,
+      '1P',
+      16,
+      '#FF0000',
+      280,
+      515
+    );
 
+    writeTextOnCanvasWithSize(this.ctx,
+      '2P',
+      16,
+      '#FF0000',
+      280,
+      115
+    );
 
     if (this.gameModeCounter >= 100) {
       this.gameModeCounter = 0;
