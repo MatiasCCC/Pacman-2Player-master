@@ -1,5 +1,5 @@
 class Pacman extends GameActors {
-  constructor(ctx, gameObject, pacmanControlKey, gameMap, audioLoader, initialPosition) {
+  constructor(ctx, gameObject, pacmanControlKey, gameMap, audioLoader, initialPosition,  spriteConfig) {
     super(ctx, gameObject, gameMap, initialPosition);
 
     this.audioLoader = audioLoader;
@@ -10,7 +10,9 @@ class Pacman extends GameActors {
     this.energizerEaten = 0;
     this.fruitEaten = 0; //bonus symbols (commonly known as fruit)
     this.score = 0;
-	this.currentSoundToggle = 0;
+	  this.currentSoundToggle = 0;
+
+    this.spritePosition = PACMAN_SPRITE_POSITION[spriteConfig];
 
     this.ghosts = null;
     this.deadDisplayCounter = 0;
@@ -50,7 +52,7 @@ class Pacman extends GameActors {
     initialPosition = initialPosition || this.initialPosition;
 
     //set animation of pacman to left moving
-    super.setSpritePosition(PACMAN_SPRITE_POSITION.NORMAL);
+    super.setSpritePosition(this.spritePosition.NORMAL);
 
     this.spriteAnimation.spriteXPosition = 2;
     this.setMovingLeftActorData();
@@ -134,8 +136,8 @@ class Pacman extends GameActors {
     // draw new frame pacman
     this.ctx.drawImage(
       this.spriteAnimation.image,
-      PACMAN_SPRITE_POSITION.INITAL.X * this.dimensions[0],
-      PACMAN_SPRITE_POSITION.INITAL.Y * this.dimensions[1],
+      this.spritePosition.INITAL.X * this.dimensions[0],
+      this.spritePosition.INITAL.Y * this.dimensions[1],
       this.dimensions[0],
       this.dimensions[1],
       this.position[0],
@@ -173,11 +175,11 @@ class Pacman extends GameActors {
 
   setDeadSpriteOfPacman() {
     // return if dead sprite already set
-    if (this.spriteAnimation.spriteYPosition == PACMAN_SPRITE_POSITION.DEAD.Y) {
+    if (this.spriteAnimation.spriteYPosition == this.spritePosition.DEAD.Y) {
       return;
     }
     // set sprite to dead
-    super.setSpritePosition(PACMAN_SPRITE_POSITION.DEAD);
+    super.setSpritePosition(this.spritePosition.DEAD);
     this.spriteAnimation.spriteXPosition = 0;
   }
 

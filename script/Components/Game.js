@@ -17,6 +17,12 @@ class Game {
     this.players = [];
     this.ghosts = null;
 
+    let playerSpriteSelections = {
+      player0: 'Azul', // This will hold the spriteConfig for player 1
+      player1: 'Rojo'  // This will hold the spriteConfig for player 2
+    };
+
+
     //game pause state refers to when pacman dead or ghost dead, game end etc
     this.gamePauseState = false;
     this.ghostKilledScoreMultiplier = 0;
@@ -62,13 +68,15 @@ document.addEventListener('keydown', (event) => {
 
     //initualize pacman class with given data in gamedata
     for (let [key, playerData] of Object.entries(this.gamedata.player)) {
+      let spriteConfig = playerSpriteSelections[key]; // Retrieve the selected spriteConfig based on player key
       let player = new Pacman(
         this.ctx,
         this,
         playerData.control,
         this.gameMap,
         this.audioLoader,
-        playerData.initialPosition);
+        playerData.initialPosition,
+        spriteConfig);
 
       //add pacman to array
       this.players.push(player);

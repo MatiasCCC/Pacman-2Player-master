@@ -33,6 +33,7 @@ const GAME_SYMBOLS = {
 };
 
 const PACMAN_SPRITE_POSITION = {
+'Naranja': {
   NORMAL: {
     X: [[5, 6, 2, 6], [7, 8, 2, 8], [4, 3, 2, 3], [0, 1, 2, 1]],
     Y: 0,
@@ -48,6 +49,41 @@ const PACMAN_SPRITE_POSITION = {
     Y: 0,
     DELAY_SPEED: 3
   }
+},
+'Rojo': {
+  NORMAL: {
+    X: [[5, 6, 2, 6], [7, 8, 2, 8], [4, 3, 2, 3], [0, 1, 2, 1]],
+    Y: 2,
+    DELAY_SPEED: 5
+  }, //moving top, moving bottom, moving left, moving right
+  DEAD: {
+    X: [[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]],
+    Y: 1,
+    DELAY_SPEED: 8
+  },
+  INITAL: {
+    X: 2,
+    Y: 0,
+    DELAY_SPEED: 3
+  }
+},
+'Azul': {
+  NORMAL: {
+    X: [[5, 6, 2, 6], [7, 8, 2, 8], [4, 3, 2, 3], [0, 1, 2, 1]],
+    Y: 11,
+    DELAY_SPEED: 5
+  }, //moving top, moving bottom, moving left, moving right
+  DEAD: {
+    X: [[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]],
+    Y: 12,
+    DELAY_SPEED: 8
+  },
+  INITAL: {
+    X: 2,
+    Y: 11,
+    DELAY_SPEED: 3
+  }
+}
 };
 
 // GHOST SPRITE POSITIONS
