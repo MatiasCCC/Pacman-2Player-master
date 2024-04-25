@@ -80,6 +80,9 @@ class GameMenu {
     
 
     //draw logo
+
+
+    
     this.ctx.drawImage(
       PACMAN_LOGO_IMAGE,
       0,
