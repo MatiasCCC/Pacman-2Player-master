@@ -13,7 +13,10 @@ const PLAYER2_CONTROL_KEY = {
   LEFT: 65,
   RIGHT: 68
 };
-
+var playerSpriteSelections = {
+  0: 'Azul', // This will hold the spriteConfig for player 1
+  1: 'Rojo'  // This will hold the spriteConfig for player 2
+};
 //moving direction for game objects
 const MOVING_DIRECTION = {
   UP: "UP",

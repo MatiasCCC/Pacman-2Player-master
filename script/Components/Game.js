@@ -17,10 +17,7 @@ class Game {
     this.players = [];
     this.ghosts = null;
 
-    let playerSpriteSelections = {
-      player0: 'Azul', // This will hold the spriteConfig for player 1
-      player1: 'Rojo'  // This will hold the spriteConfig for player 2
-    };
+
 
 
     //game pause state refers to when pacman dead or ghost dead, game end etc
@@ -56,7 +53,7 @@ document.addEventListener('keydown', (event) => {
     console.log('Returning to menu'); // Debugging line to confirm the key press works
   }
 });
-
+  
   //sirena
   this.isSirenPlaying = false
 
@@ -307,7 +304,7 @@ document.addEventListener('keydown', (event) => {
       (11 * 16),
       HEADER_HEIGHT + (18 * 16)
     );
-
+/*
     writeTextOnCanvasWithSize(this.ctx,
       '1P',
       16,
@@ -323,7 +320,7 @@ document.addEventListener('keydown', (event) => {
       280,
       115
     );
-
+ */
     if (this.gameModeCounter >= 100) {
       this.gameMode = GAME_MODE.GAME_BEGIN;
       this.hasPlayed = false;
@@ -353,7 +350,7 @@ document.addEventListener('keydown', (event) => {
       (11 * 16),
       HEADER_HEIGHT + (18 * 16)
     );
-
+/*
     writeTextOnCanvasWithSize(this.ctx,
       '1P',
       16,
@@ -369,7 +366,7 @@ document.addEventListener('keydown', (event) => {
       280,
       115
     );
-
+*/
     if (this.gameModeCounter >= 100) {
       this.gameModeCounter = 0;
       this.gameMode = GAME_MODE.GAME_PLAYING;
@@ -486,14 +483,20 @@ document.addEventListener('keydown', (event) => {
     //display footer
     this.ctx.fillStyle = '#000000';
     this.ctx.fillRect(0, GAME_HEIGHT, CANVAS_WIDTH, FOOTER_HEIGHT);
-
+    
     //pacman lives icon generator
     for (let i = 0; i < this.players[0].lives && i < PACMAN_MAX_LIVES; i++) {
+      let sprite = 0;
+      if (playerSpriteSelections[0] == 'Azul') {
+        sprite = 11;
+      }else if(playerSpriteSelections[0] == 'Rojo'){
+        sprite = 13;
+      }
       // draw pacman lives icon
       this.ctx.drawImage(
         PACMAN_SPRITE_IMAGE,
         32 * 3,
-        32 * 0,
+        32 * sprite,
         32,
         32,
         (i + 1) * 32,
@@ -526,10 +529,16 @@ document.addEventListener('keydown', (event) => {
     }
     else {
       for (let i = 0, xaxis = 1; i < this.players[1].lives && i < PACMAN_MAX_LIVES; i++ , xaxis++) {
+        let sprite = 0;
+        if (playerSpriteSelections[1] == 'Azul') {
+          sprite = 11;
+        }else if(playerSpriteSelections[1] == 'Rojo'){
+          sprite = 13;
+        }
         this.ctx.drawImage(
           PACMAN_SPRITE_IMAGE,
           32 * 3,
-          32 * 0,
+          32 * sprite,
           32,
           32,
           (16 * 28) - ((xaxis + 1) * 32),

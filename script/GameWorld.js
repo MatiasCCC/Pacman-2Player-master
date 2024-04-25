@@ -24,6 +24,7 @@ class GameWorld {
     this.playerVsPlayerGame = null;
     this.audioLoader = null;
 
+    
 
     fps = fps || GAME_ANIMATION_SPEED_FPS;
     this.start = 0;
