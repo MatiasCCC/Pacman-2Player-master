@@ -40,8 +40,8 @@ AZUL_IMAGE.src = AZUL;
 
 const GAME_SYMBOLS = {
   ENERGIZER: {
-    X: [4, 6],
-    Y: 2,
+    X: [0, 6],
+    Y: 18,
     DELAY_SPEED: 12
   }
 };

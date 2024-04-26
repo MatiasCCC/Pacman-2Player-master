@@ -21,7 +21,7 @@ class GameMap {
     //for enerzier
     this.spriteAnimation = new Sprite(GAME_SYMBOLS.ENERGIZER.X,
       GAME_SYMBOLS.ENERGIZER.DELAY_SPEED,
-      PACMAN_TILES,
+      PACMAN_SPRITES,
       GAME_SYMBOLS.ENERGIZER.Y);
 
     this.createLayoutMapGraph(this.layoutMap);
@@ -129,12 +129,12 @@ class GameMap {
         this.ctx.drawImage(this.spriteAnimation.image,
           this.spriteAnimation.spriteXPosition * this.layoutMap.tileWidth,
           this.spriteAnimation.spriteYPosition * this.layoutMap.tileHeight,
-          this.layoutMap.tileWidth,
-          this.layoutMap.tileHeight,
-          destinationX,
-          destinationY + HEADER_HEIGHT,
-          this.layoutMap.tileWidth,
-          this.layoutMap.tileHeight);
+          28,
+          28,
+          destinationX - 4,
+          destinationY - 4 + HEADER_HEIGHT,
+          22,
+          22);
       }
     }
   }

@@ -79,7 +79,7 @@ class GameMenu {
     this.drawGameOptions();
     this.drawSelectionHighlighter();
       // Draw Player 1's selected image
-      this.ctx.drawImage(this.player1Images[this.player1ImageSelection], 100, 250, 50, 50); // Example coordinates
+      this.ctx.drawImage(this.player1Images[this.player1ImageSelection], 94, 250, 50, 50); // Example coordinates
       // Draw Player 2's selected image
       this.ctx.drawImage(this.player2Images[this.player2ImageSelection], 300, 250, 50, 50); 
   }
@@ -132,12 +132,12 @@ class GameMenu {
     //write game menu options
     //writeTextOnCanvasWithSize(this.ctx, 'Single Player Mode', 15, 'white', 20, 250);
     writeTextOnCanvasWithSize(this.ctx, '         EMPEZAR', 15, 'white', 30, 450);
-    writeTextOnCanvasWithSize(this.ctx, 'J1', 15, 'white', 107, 350);
+    writeTextOnCanvasWithSize(this.ctx, 'J1', 15, 'white', 101, 350);
     writeTextOnCanvasWithSize(this.ctx, 'J2', 15, 'white', 307, 350);
     writeTextOnCanvasWithSize(this.ctx, '<', 20, 'white', 266, 285);
     writeTextOnCanvasWithSize(this.ctx, '>', 20, 'white', 362, 285);
-    writeTextOnCanvasWithSize(this.ctx, '<', 20, 'white', 66, 285);
-    writeTextOnCanvasWithSize(this.ctx, '>', 20, 'white', 162, 285);
+    writeTextOnCanvasWithSize(this.ctx, '<', 20, 'white', 60, 285);
+    writeTextOnCanvasWithSize(this.ctx, '>', 20, 'white', 156, 285);
     
   }
   
