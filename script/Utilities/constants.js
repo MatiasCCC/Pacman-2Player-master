@@ -130,20 +130,20 @@ const CHARACTERS_SPEED = {
   },
   GHOST: {
     1: {
-      NORMAL: 130, //when scatter/chase mode
-      FRIGHT: 170 //when frightened mode
+      NORMAL: 210, //when scatter/chase mode
+      FRIGHT: 200 //when frightened mode
     },
     2: {
-      NORMAL: 110, //when scatter/chase mode
-      FRIGHT: 160 //when frightened mode
+      NORMAL: 200, //when scatter/chase mode
+      FRIGHT: 190 //when frightened mode
     },
     5: {
-      NORMAL: 95, //when scatter/chase mode
-      FRIGHT: 150 //when frightened mode
+      NORMAL: 190, //when scatter/chase mode
+      FRIGHT: 200 //when frightened mode
     },
     21: {
-      NORMAL: 85, //when scatter/chase mode
-      FRIGHT: 80 //when frightened mode
+      NORMAL: 170, //when scatter/chase mode
+      FRIGHT: 160 //when frightened mode
     },
     DEAD: 200
   }
