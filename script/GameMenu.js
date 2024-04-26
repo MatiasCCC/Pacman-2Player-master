@@ -13,6 +13,7 @@ class GameMenu {
     this.player2Images = ['image/p21.png', 'image/p22.png', 'image/p23.png'];
     
     
+    
     this.addGameMenuControls = (e) => {
       if (e.keyCode == 13) {
         this.initiateGame();
@@ -69,11 +70,14 @@ class GameMenu {
     this.drawPlayerImage(this.player1Images[this.player1ImageSelection], 100, 100); // Example coordinates
       // Draw Player 2's selected image
     this.drawPlayerImage(this.player2Images[this.player2ImageSelection], 300, 100); 
+    onload();
   }
 
   drawPlayerImage(imagePath, x, y) {
+    let canvas = document.getElementById('main-canvas');
+    let ctx = canvas.getContext('2d');
     let img = new Image();
-    img.onload = () => {
+    img.onload = () => {  
       this.ctx.drawImage(img, x, y);
     };
     img.src = imagePath;
