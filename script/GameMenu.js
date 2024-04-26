@@ -5,18 +5,19 @@ class GameMenu {
     this.currentSelectedMenu = GAME_STATE.PLAYER_VS_PLAYER;
     this.eventAdded = false;
     
-    // Image selection states for players
+// Image selection states for players
     this.player1ImageSelection = 0;
     this.player2ImageSelection = 0;
     // Arrays of images for each player's selections
     this.player1Images = ['image/p11.png', 'image/p12.png', 'image/p13.png'];
     this.player2Images = ['image/p21.png', 'image/p22.png', 'image/p23.png'];
     
-
+    
     this.addGameMenuControls = (e) => {
       if (e.keyCode == 13) {
         this.initiateGame();
       }
+  
 /*      if (e.keyCode === PLAYER1_CONTROL_KEY.UP) {
         if (this.currentSelectedMenu != GAME_STATE.SINGLE_PLAYER) {
           this.currentSelectedMenu = this.currentSelectedMenu - 100;
