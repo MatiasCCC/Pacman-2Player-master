@@ -3,13 +3,18 @@ const PACMAN_TILES = 'image/pacman-tiles.png';
 const PACMAN_SPRITES = 'image/sprites32.png';
 const PACMAN_LOGO = 'image/pacman-logo.png';
 const FANTA = 'image/fanta.png';
-
+const NARANJA = 'image/p11.png';
+const ROJO = 'image/p12.png';
+const AZUL = 'image/p13.png';
 
 const GAME_IMAGES = [
   PACMAN_TILES,
   PACMAN_SPRITES,
   PACMAN_LOGO,
-  FANTA
+  FANTA,
+  NARANJA,
+  ROJO,
+  AZUL
 ];
 
 const SPRITE_ANIMATION_DELAY = 5;
@@ -22,6 +27,15 @@ PACMAN_LOGO_IMAGE.src = PACMAN_LOGO;
 
 const FANTA_LOGO_IMAGE = new Image();
 FANTA_LOGO_IMAGE.src = FANTA;
+
+const NARANJA_IMAGE = new Image();
+NARANJA_IMAGE.src = NARANJA;
+
+const ROJO_IMAGE = new Image();
+ROJO_IMAGE.src = ROJO;
+
+const AZUL_IMAGE = new Image();
+AZUL_IMAGE.src = AZUL;
 
 
 const GAME_SYMBOLS = {

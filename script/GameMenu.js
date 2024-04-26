@@ -8,14 +8,26 @@ class GameMenu {
 // Image selection states for players
     this.player1ImageSelection = 0;
     this.player2ImageSelection = 0;
-    // Arrays of images for each player's selections
-    this.player1Images = ['image/p11.png', 'image/p12.png', 'image/p13.png'];
-    this.player2Images = ['image/p21.png', 'image/p22.png', 'image/p23.png'];
     
-    
+    this.player1Images = [NARANJA_IMAGE, ROJO_IMAGE, AZUL_IMAGE];
+    this.player2Images = [NARANJA_IMAGE, ROJO_IMAGE, AZUL_IMAGE];
     
     this.addGameMenuControls = (e) => {
       if (e.keyCode == 13) {
+        if (this.player1ImageSelection == 0) {
+           playerSpriteSelections[0] = 'Naranja';
+        }else if (this.player1ImageSelection == 1) {
+          playerSpriteSelections[0] = 'Rojo';
+        }else if (this.player1ImageSelection == 2) {
+          playerSpriteSelections[0] = 'Azul';
+        }
+        if (this.player2ImageSelection == 0) {
+          playerSpriteSelections[1] = 'Naranja';
+       }else if (this.player2ImageSelection == 1) {
+         playerSpriteSelections[1] = 'Rojo';
+       }else if (this.player2ImageSelection == 2) {
+         playerSpriteSelections[1] = 'Azul';
+       }
         this.initiateGame();
       }
   
@@ -67,20 +79,9 @@ class GameMenu {
     this.drawGameOptions();
     this.drawSelectionHighlighter();
       // Draw Player 1's selected image
-    this.drawPlayerImage(this.player1Images[this.player1ImageSelection], 100, 100); // Example coordinates
+      this.ctx.drawImage(this.player1Images[this.player1ImageSelection], 100, 250); // Example coordinates
       // Draw Player 2's selected image
-    this.drawPlayerImage(this.player2Images[this.player2ImageSelection], 300, 100); 
-    onload();
-  }
-
-  drawPlayerImage(imagePath, x, y) {
-    let canvas = document.getElementById('main-canvas');
-    let ctx = canvas.getContext('2d');
-    let img = new Image();
-    img.onload = () => {  
-      this.ctx.drawImage(img, x, y);
-    };
-    img.src = imagePath;
+      this.ctx.drawImage(this.player2Images[this.player2ImageSelection], 300, 250); 
   }
 
   drawSelectionHighlighter() {
@@ -94,7 +95,7 @@ class GameMenu {
 
       case GAME_STATE.PLAYER_VS_PLAYER:
         positionX = 10;
-        positionY = 285;
+        positionY = 385;
         break;
     }
 
@@ -130,7 +131,7 @@ class GameMenu {
     );
     //write game menu options
     //writeTextOnCanvasWithSize(this.ctx, 'Single Player Mode', 15, 'white', 20, 250);
-    writeTextOnCanvasWithSize(this.ctx, '         EMPEZAR', 15, 'white', 20, 315);
+    writeTextOnCanvasWithSize(this.ctx, '         EMPEZAR', 15, 'white', 20, 415);
     
   }
   
