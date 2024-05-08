@@ -73,6 +73,9 @@ class Pacman extends GameActors {
    * @memberof Pacman
    */
   draw() {
+    if (this.lives < 0) {
+      return; // Exit the draw function early if Pacman is out of lives
+    }
     // get current time in milliseconds
     let currentFrameTime = Date.now();
 
@@ -212,7 +215,17 @@ class Pacman extends GameActors {
     this.audioLoader.play('die');
     if (this.lives < 0) {//game over if no lives left
       this.movingDirection = MOVING_DIRECTION.STOP;
+    // Check if the other player still has lives
+    const otherPlayerIndex = this.id === 0 ? 1 : 0;
+    const otherPlayer = this.gameObject.players[otherPlayerIndex];
+
+    if (otherPlayer.lives <= 0) {
+      // Both players are out of lives, end the game
       this.gameObject.gameMode = GAME_MODE.GAME_OVER;
+    } else {
+      // The other player still has lives, update game state accordingly
+      // Possibly do nothing or update UI to reflect the change
+    }
     } else {
       //start new game
       this.movingDirection = MOVING_DIRECTION.STOP;
