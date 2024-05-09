@@ -220,15 +220,15 @@ class Pacman extends GameActors {
    * @memberof Pacman
    */
   kill() {
+    if(this.lives <= 0){
+      return
+    }
     this.lives -= 1;
     this.audioLoader.play('die');
       //start new game
       if (this.lives <= 0) {
         this.pacDead = true;
         this.movingDirection = MOVING_DIRECTION.STOP;
-        if(this.pacDead){
-          
-        }
       }
       this.movingDirection = MOVING_DIRECTION.STOP;
       if (this.gameObject.gamedata.gameState == GAME_STATE.SINGLE_PLAYER) {
