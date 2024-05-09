@@ -3,7 +3,7 @@ class Pacman extends GameActors {
     super(ctx, gameObject, gameMap, initialPosition);
 
     this.audioLoader = audioLoader;
-    this.lives = 1;
+    this.lives = 3;
     this.pacDead = false;
     this.gameOver = false;
     this.dotsEaten = 0;
