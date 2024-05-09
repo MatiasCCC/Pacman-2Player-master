@@ -3,7 +3,7 @@ class Pacman extends GameActors {
     super(ctx, gameObject, gameMap, initialPosition);
 
     this.audioLoader = audioLoader;
-    this.lives = 2;
+    this.lives = 1;
     this.pacDead = false;
     this.gameOver = false;
     this.dotsEaten = 0;
@@ -73,7 +73,12 @@ class Pacman extends GameActors {
    * @memberof Pacman
    */
   draw() {
-    if (this.lives < 0) {
+    if ((this.gameObject.players[0].lives <= 0) && (this.gameObject.players[1].lives <= 0)) {
+      // Both players are out of lives, end the game
+      this.gameObject.gameMode = GAME_MODE.GAME_OVER;}
+    if (this.lives <= 0) {
+
+
       return; // Exit the draw function early if Pacman is out of lives
     }
     // get current time in milliseconds
@@ -137,6 +142,10 @@ class Pacman extends GameActors {
 
   drawInitialSprite() {
     // draw new frame pacman
+    if (this.lives <= 0) {
+      this.hideDrawImage = true;
+      return; // Exit the draw function early if Pacman is out of lives
+    }
     this.ctx.drawImage(
       this.spriteAnimation.image,
       this.spritePosition.INITAL.X * this.dimensions[0],
@@ -213,23 +222,16 @@ class Pacman extends GameActors {
   kill() {
     this.lives -= 1;
     this.audioLoader.play('die');
-    if (this.lives < 0) {//game over if no lives left
-      this.movingDirection = MOVING_DIRECTION.STOP;
-    // Check if the other player still has lives
-    const otherPlayerIndex = this.id === 0 ? 1 : 0;
-    const otherPlayer = this.gameObject.players[otherPlayerIndex];
-
-    if (otherPlayer.lives <= 0) {
-      // Both players are out of lives, end the game
-      this.gameObject.gameMode = GAME_MODE.GAME_OVER;
-    } else {
-      // The other player still has lives, update game state accordingly
-      // Possibly do nothing or update UI to reflect the change
-    }
-    } else {
       //start new game
-      this.movingDirection = MOVING_DIRECTION.STOP;
+      if (this.lives <= 0) {
 
+        this.pacDead = true;
+        this.movingDirection = MOVING_DIRECTION.STOP;
+        if(this.pacDead){
+          
+        }
+      }
+      this.movingDirection = MOVING_DIRECTION.STOP;
       if (this.gameObject.gamedata.gameState == GAME_STATE.SINGLE_PLAYER) {
         this.gameObject.gameMode = GAME_MODE.PACMAN_DEAD;
       }
@@ -237,7 +239,6 @@ class Pacman extends GameActors {
         this.pacDead = true;
       }
     }
-  }
 
   setPointsIfEaten() {
     //get score from Dot eaten
@@ -304,7 +305,7 @@ class Pacman extends GameActors {
   addScore(nScore) {
     this.score += nScore;
     // add extra life after getting 5,000 points
-    if (this.score >= 3000 && this.score - nScore < 3000) {
+    if (this.score >= 6000 && this.score - nScore < 6000) {
       this.lives += 1;
       this.audioLoader.play('extralives');
     }
