@@ -224,7 +224,6 @@ class Pacman extends GameActors {
     this.audioLoader.play('die');
       //start new game
       if (this.lives <= 0) {
-
         this.pacDead = true;
         this.movingDirection = MOVING_DIRECTION.STOP;
         if(this.pacDead){
