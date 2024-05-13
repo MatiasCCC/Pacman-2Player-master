@@ -211,7 +211,9 @@ document.addEventListener('keydown', (event) => {
           if (!this.players[i].pacDead) {
             this.players[i].draw();
             for (let j = 0; j < this.players[i].ghosts.length; j++) {
+              if(this.players[i].lives > 0){
               this.players[i].ghosts[j].moveGhosts();
+            }
             }
           }
           else {
@@ -339,7 +341,9 @@ document.addEventListener('keydown', (event) => {
     for (let i = 0; i < this.players.length; i++) {
       this.players[i].drawInitialSprite();
       for (let j = 0; j < this.players[i].ghosts.length; j++) {
+        if(this.players[i].lives > 0){
         this.players[i].ghosts[j].drawInitialSprite();
+        }
       }
     }
 

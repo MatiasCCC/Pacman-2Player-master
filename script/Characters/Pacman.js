@@ -77,7 +77,7 @@ class Pacman extends GameActors {
       // Both players are out of lives, end the game
       this.gameObject.gameMode = GAME_MODE.GAME_OVER;}
     if (this.lives <= 0) {
-
+      
 
       return; // Exit the draw function early if Pacman is out of lives
     }
@@ -129,7 +129,9 @@ class Pacman extends GameActors {
       this.setInitialPosition(this.initialPosition);
       this.drawInitialSprite();
       for (let j = 0; j < this.ghosts.length; j++) {
+        if(this.lives > 0){
         this.ghosts[j].drawInitialSprite();
+      }
       }
       this.deadDisplayCounter++;
       if (this.deadDisplayCounter > 100) {
